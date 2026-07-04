@@ -8,10 +8,27 @@ document.addEventListener('DOMContentLoaded', function () {
       const open = links.classList.toggle('open');
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
-    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      links.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-    }));
+    // Event delegation (not per-link listeners) so this keeps working even after
+    // content-loader.js replaces the nav links with freshly-built ones for reordering.
+    links.addEventListener('click', (e) => {
+      if (e.target.closest('a')) {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    // Extra safety nets: Escape key, and clicking anywhere outside the open panel
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && links.classList.contains('open')) {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.addEventListener('click', (e) => {
+      if (links.classList.contains('open') && !links.contains(e.target) && !toggle.contains(e.target)) {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
   }
 
   // Scroll-reveal animation (reusable so dynamically-loaded content can trigger it too)
