@@ -82,11 +82,21 @@ document.addEventListener('DOMContentLoaded', async function () {
         return !link.startsWith('#') && link === currentPath;
       }
 
-      const headerNavEl = document.getElementById('nav-items-container');
-      if (headerNavEl) {
-        headerNavEl.innerHTML = settings.nav_items.map(item =>
-          `<a href="${esc(navHref(item.link))}"${isCurrent(item.link) ? ' class="current"' : ''}>${esc(item.label)}</a>`
-        ).join('\n');
+      const headerNavParent = document.getElementById('nav-links');
+      const ctaBtn = document.getElementById('header-contact-btn');
+      if (headerNavParent && ctaBtn) {
+        // Remove all existing nav links except the CTA button itself
+        Array.from(headerNavParent.querySelectorAll('a')).forEach(a => {
+          if (a.id !== 'header-contact-btn') a.remove();
+        });
+        // Insert freshly-ordered links right before the CTA button
+        settings.nav_items.forEach(item => {
+          const a = document.createElement('a');
+          a.href = navHref(item.link);
+          a.textContent = item.label;
+          if (isCurrent(item.link)) a.className = 'current';
+          headerNavParent.insertBefore(a, ctaBtn);
+        });
       }
       const footerNavEl = document.getElementById('footer-nav-items-container');
       if (footerNavEl) {
