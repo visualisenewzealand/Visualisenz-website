@@ -180,7 +180,7 @@
         <h2 style="margin-top:1rem;">Meet Melissa</h2>
         <p class="bio">Melissa's career began in marketing — a degree, followed by years in marketing communications for corporate organisations across New Zealand, the UK and Australia, developing a sharp instinct for how to present an idea so it actually lands.</p>
         <p class="bio" style="margin-top:1.1rem;">That instinct became the foundation for a progressive move into interior design, where she holds a Diploma in Interior Design along with further study in commercial design, kitchen and bathroom design, and Sketchup. It's this combination — genuine design training, backed by a career built on communicating ideas clearly — that shapes every render she produces: never just a pretty picture, always built to help you sell the vision.</p>
-        <p class="bio" style="margin-top:1.1rem;">Based on the Kāpiti Coast and working with clients throughout New Zealand, Melissa is easy to work with, realistic about pricing, and always keen to hear about the next project. Get in touch — she'd love to help bring your project to life.</p>
+        <p class="bio" id="bio-text" style="margin-top:1.1rem;">Based on the Kāpiti Coast and working with clients throughout New Zealand, Melissa is easy to work with, realistic about pricing, and always keen to hear about the next project. Get in touch — she'd love to help bring your project to life.</p>
       </div>
     </div>
   </section>
@@ -192,7 +192,7 @@
         <h2 style="margin-top:1rem;">What clients are saying</h2>
         <p class="sub" style="margin-left:auto;margin-right:auto;">See what interior designers, developers and building companies say about working with Visualise NZ.</p>
       </div>
-      <a href="https://share.google/uz5BSb3SUm9aPpeZi" target="_blank" rel="noopener" class="btn btn-solid" style="background:var(--plum);color:var(--white);">Read our reviews on Google</a>
+      <a href="https://share.google/uz5BSb3SUm9aPpeZi" id="reviews-btn" target="_blank" rel="noopener" class="btn btn-solid" style="background:var(--plum);color:var(--white);">Read our reviews on Google</a>
     </div>
   </section>
 
@@ -201,7 +201,7 @@
       <h2 class="reveal">Let's visualise your next project.</h2>
       <p class="sub reveal">Send through your plans, drawings or measurements and let's talk about what's possible.</p>
       <div class="cta-row reveal">
-        <a href="mailto:hello@visualisenz.com" class="btn btn-outline">Let's Chat</a>
+        <a href="mailto:hello@visualisenz.com" id="chat-btn" class="btn btn-outline">Let's Chat</a>
       </div>
     </div>
   </section>
@@ -230,25 +230,25 @@
       <div class="footer-col">
         <span class="label">Get In Touch</span>
         <ul>
-          <li><a href="mailto:hello@visualisenz.com">hello@visualisenz.com</a></li>
-          <li><a href="tel:+64215000602">021 500 602</a></li>
-          <li>Kāpiti Coast, Wellington, NZ</li>
-          <li style="margin-top:0.6rem; color:rgba(255,255,255,0.55); font-size:0.85rem;">NZBN: 9429051687984</li>
+          <li><a href="mailto:hello@visualisenz.com" id="footer-email">hello@visualisenz.com</a></li>
+          <li><a href="tel:+64215000602" id="footer-phone">021 500 602</a></li>
+          <li id="footer-address">Kāpiti Coast, Wellington, NZ</li>
+          <li style="margin-top:0.6rem; color:rgba(255,255,255,0.55); font-size:0.85rem;"><span id="footer-nzbn">NZBN: 9429051687984</span></li>
         </ul>
       </div>
       <div class="footer-col">
         <span class="label">Follow</span>
         <div class="socials">
-          <a href="https://www.facebook.com/visualisenz/" aria-label="Visualise NZ on Facebook" target="_blank" rel="noopener">
+          <a href="https://www.facebook.com/visualisenz/" id="social-facebook" aria-label="Visualise NZ on Facebook" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.3-1.5 1.6-1.5H16.7V3.6C16.4 3.6 15.4 3.5 14.3 3.5c-2.4 0-4 1.5-4 4.2v2.2H7.6V13h2.7v8h3.2z"/></svg>
           </a>
-          <a href="https://www.instagram.com/visualisenz/" aria-label="Visualise NZ on Instagram" target="_blank" rel="noopener">
+          <a href="https://www.instagram.com/visualisenz/" id="social-instagram" aria-label="Visualise NZ on Instagram" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24"><path d="M12 2c2.7 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.16.56.55.9 1.11 1.16 1.77.25.64.42 1.37.47 2.43C21.99 8.94 22 9.3 22 12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.16 1.77 4.9 4.9 0 0 1-1.77 1.16c-.64.25-1.37.42-2.43.47C15.06 21.99 14.7 22 12 22s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.16 4.9 4.9 0 0 1-1.16-1.77c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.7 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.16-1.77A4.9 4.9 0 0 1 5.46 2.52c.64-.25 1.37-.42 2.43-.47C8.94 2.01 9.3 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.2-8.4a1.17 1.17 0 1 1 0-2.34 1.17 1.17 0 0 1 0 2.34z"/></svg>
           </a>
-          <a href="https://www.youtube.com/@visualisenz" aria-label="Visualise NZ on YouTube" target="_blank" rel="noopener">
+          <a href="https://www.youtube.com/@visualisenz" id="social-youtube" aria-label="Visualise NZ on YouTube" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24"><path d="M21.6 7.2s-.2-1.5-.8-2.1c-.8-.8-1.7-.8-2.1-.9C15.9 4 12 4 12 4h0s-3.9 0-6.7.2c-.4.1-1.3.1-2.1.9-.6.6-.8 2.1-.8 2.1S2 9 2 10.7v1.6C2 14 2.2 15.8 2.2 15.8s.2 1.5.8 2.1c.8.8 1.9.8 2.3.9C6.9 19 12 19 12 19s3.9 0 6.7-.2c.4-.1 1.3-.1 2.1-.9.6-.6.8-2.1.8-2.1s.2-1.8.2-3.5v-1.6c0-1.7-.2-3.5-.2-3.5zM9.9 14.6V8.9l5.4 2.9-5.4 2.8z"/></svg>
           </a>
-          <a href="https://www.linkedin.com/company/visualise-nz/" aria-label="Visualise NZ on LinkedIn" target="_blank" rel="noopener">
+          <a href="https://www.linkedin.com/company/visualise-nz/" id="social-linkedin" aria-label="Visualise NZ on LinkedIn" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.02-3.06-1.86-3.06-1.87 0-2.16 1.46-2.16 2.96V21h-4z"/></svg>
           </a>
         </div>
@@ -262,6 +262,7 @@
 </footer>
 
 <script src="js/main.js" defer></script>
+<script src="js/content-loader.js" defer></script>
 
 </body>
 </html>

@@ -23,24 +23,31 @@ document.addEventListener('DOMContentLoaded', function () {
     }));
   }
 
-  // Scroll-reveal animation
-  const reveals = document.querySelectorAll('.reveal');
-  if (reveals.length) {
+  // Scroll-reveal animation (reusable so dynamically-loaded content can trigger it too)
+  let revealObserver = null;
+  window.initRevealObserver = function () {
+    const reveals = document.querySelectorAll('.reveal:not(.reveal-bound)');
+    if (!reveals.length) return;
     if ('IntersectionObserver' in window) {
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-      }, { threshold: 0.12 });
-      reveals.forEach(el => io.observe(el));
+      if (!revealObserver) {
+        revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revealObserver.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+      }
+      reveals.forEach(el => { el.classList.add('reveal-bound'); revealObserver.observe(el); });
     } else {
-      reveals.forEach(el => el.classList.add('in'));
+      reveals.forEach(el => { el.classList.add('reveal-bound', 'in'); });
     }
-  }
+  };
+  window.initRevealObserver();
 
-  // Homepage "Our Renders" slideshow
-  const slides = document.querySelectorAll('#slideshow .slide');
-  const dots = document.querySelectorAll('#slideshow .dot');
-  if (slides.length) {
-    let idx = 0, timer;
+  // Homepage "Our Renders" slideshow (reusable so dynamically-loaded slides can (re)initialise it)
+  window.initSlideshow = function () {
+    const slides = document.querySelectorAll('#slideshow .slide');
+    const dots = document.querySelectorAll('#slideshow .dot');
+    if (!slides.length) return;
+    if (window._slideshowTimer) clearInterval(window._slideshowTimer);
+    let idx = 0;
     function show(i) {
       slides.forEach(s => s.classList.remove('active'));
       dots.forEach(d => d.classList.remove('active'));
@@ -49,27 +56,32 @@ document.addEventListener('DOMContentLoaded', function () {
       idx = i;
     }
     function next() { show((idx + 1) % slides.length); }
-    function start() { timer = setInterval(next, 4200); }
-    function stop() { clearInterval(timer); }
+    function start() { window._slideshowTimer = setInterval(next, 4200); }
+    function stop() { clearInterval(window._slideshowTimer); }
     dots.forEach((d, i) => d.addEventListener('click', () => { show(i); stop(); start(); }));
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) { start(); }
-  }
+  };
+  window.initSlideshow();
 
-  // Portfolio page category filter
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const catGroups = document.querySelectorAll('.cat-group');
-  if (filterBtns.length && catGroups.length) {
+  // Portfolio page category filter (reusable so it (re)binds after dynamic content loads)
+  window.initFilters = function () {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const catGroups = document.querySelectorAll('.cat-group');
+    if (!filterBtns.length || !catGroups.length) return;
     filterBtns.forEach(btn => {
+      if (btn.dataset.bound) return;
+      btn.dataset.bound = '1';
       btn.addEventListener('click', () => {
         filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         const f = btn.dataset.filter;
-        catGroups.forEach(g => {
+        document.querySelectorAll('.cat-group').forEach(g => {
           g.classList.toggle('hidden', f !== 'all' && g.dataset.cat !== f);
         });
       });
     });
-  }
+  };
+  window.initFilters();
 
   // Footer copyright year
   const yearEl = document.getElementById('year');

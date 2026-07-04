@@ -1,0 +1,27 @@
+{
+  "contact": {
+    "email": "hello@visualisenz.com",
+    "phone_display": "021 500 602",
+    "phone_link": "+64215000602",
+    "address": "Kāpiti Coast, Wellington, NZ",
+    "nzbn": "9429051687984"
+  },
+  "reviews_url": "https://share.google/uz5BSb3SUm9aPpeZi",
+  "socials": {
+    "facebook": "https://www.facebook.com/visualisenz/",
+    "instagram": "https://www.instagram.com/visualisenz/",
+    "youtube": "https://www.youtube.com/@visualisenz",
+    "linkedin": "https://www.linkedin.com/company/visualise-nz/"
+  },
+  "bio_text": "Based on the Kāpiti Coast and working with clients throughout New Zealand, Melissa is easy to work with, realistic about pricing, and always keen to hear about the next project. Get in touch — she'd love to help bring your project to life.",
+  "slideshow": [
+    { "label": "Commercial Projects", "description": "", "image": "images/homepage/slide-1-commercial.jpg" },
+    { "label": "Residential Projects", "description": "", "image": "images/homepage/slide-2-residential.jpg" },
+    { "label": "Property Developments", "description": "", "image": "images/homepage/slide-3-property.jpg" },
+    { "label": "Immersive Marketing", "description": "Sell new builds just like a real estate listing.", "image": "images/homepage/slide-4-immersive-marketing.jpg" },
+    { "label": "Virtual Show Homes", "description": "Expand your customer base beyond a physical location.", "image": "images/homepage/slide-5-virtual-showhomes.jpg" },
+    { "label": "Complete Design", "description": "Present full 3D exterior & interior design concepts.", "image": "images/homepage/slide-6-complete-design.jpg" },
+    { "label": "Actual Materials", "description": "Explore multiple design options before building begins.", "image": "images/homepage/slide-7-actual-materials.jpg" },
+    { "label": "On Demand", "description": "Renders when you need them, without the hiring process.", "image": "images/homepage/slide-8-on-demand.jpg" }
+  ]
+}
