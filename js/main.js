@@ -1,14 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  // Header scroll behaviour — only applies where the header starts transparent (homepage hero).
-  // Pages whose header already starts with class="scrolled" in the HTML keep it permanently solid.
-  const header = document.getElementById('site-header');
-  if (header && !header.classList.contains('scrolled')) {
-    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
-    onScroll();
-    document.addEventListener('scroll', onScroll, { passive: true });
-  }
-
   // Mobile nav toggle
   const toggle = document.getElementById('nav-toggle');
   const links = document.getElementById('nav-links');

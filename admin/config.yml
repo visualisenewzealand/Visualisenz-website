@@ -49,6 +49,7 @@ collections:
               - { name: "category", label: "Category", widget: "select", options: [ { label: "Property Developments", value: "property" }, { label: "Commercial Projects", value: "commercial" }, { label: "Residential Projects", value: "residential" } ] }
               - { name: "category_label", label: "Category Label (small text shown above the title on the Portfolio page)", widget: "string" }
               - { name: "credit", label: "Credit Line", widget: "string", hint: "e.g. Interior design by Visualise NZ" }
+              - { name: "external_link", label: "Client's Project Website (optional)", widget: "string", required: false, hint: "If filled in, the project title on the Portfolio page will link to this site. Leave blank for no link." }
               - { name: "layout", label: "Image Layout", widget: "select", options: [ { label: "Standard grid", value: "grid" }, { label: "Side-by-side pair (for 2-image projects)", value: "pair" } ] }
               - name: "images"
                 label: "Images"
@@ -73,6 +74,13 @@ collections:
         label: "Contact, Socials & Slideshow"
         file: "data/settings.json"
         fields:
+          - name: "nav_items"
+            label: "Navigation Menu (drag to reorder — appears on every page, header and footer)"
+            widget: "list"
+            summary: "{{fields.label}}"
+            fields:
+              - { name: "label", label: "Menu Label", widget: "string" }
+              - { name: "link", label: "Link", widget: "string", hint: "Use #about, #services, #reviews etc. for homepage sections, or portfolio.html for the Portfolio page." }
           - name: "contact"
             label: "Contact Details"
             widget: "object"
@@ -91,6 +99,24 @@ collections:
               - { name: "instagram", label: "Instagram URL", widget: "string", required: false }
               - { name: "youtube", label: "YouTube URL", widget: "string", required: false }
               - { name: "linkedin", label: "LinkedIn URL", widget: "string", required: false }
+          - name: "homepage_text"
+            label: "Homepage Text"
+            widget: "object"
+            fields:
+              - { name: "hero_heading_line1", label: "Hero heading — line 1", widget: "string" }
+              - { name: "hero_heading_line2", label: "Hero heading — line 2", widget: "string" }
+              - { name: "hero_subtext", label: "Hero subtext", widget: "text" }
+              - { name: "manifesto_heading", label: "\"Why Visualise\" quote", widget: "text" }
+              - { name: "services_heading", label: "Services section — heading", widget: "string" }
+              - { name: "services_subtext", label: "Services section — subtext", widget: "string" }
+              - { name: "work_heading", label: "Portfolio teaser — heading", widget: "string" }
+              - { name: "work_subtext", label: "Portfolio teaser — subtext", widget: "string" }
+              - { name: "about_heading", label: "About section — heading", widget: "string" }
+              - { name: "reviews_heading", label: "Reviews section — heading", widget: "string" }
+              - { name: "reviews_subtext", label: "Reviews section — subtext", widget: "string" }
+              - { name: "cta_heading", label: "Final call-to-action — heading", widget: "string" }
+              - { name: "cta_subtext", label: "Final call-to-action — subtext", widget: "string" }
+          - { name: "footer_description", label: "Footer Description (appears on every page)", widget: "string" }
           - { name: "bio_text", label: "About / Bio Text (Meet Melissa section)", widget: "text" }
           - name: "slideshow"
             label: "Services Slideshow (the 8 auto-rotating slides on the homepage)"
@@ -100,3 +126,19 @@ collections:
               - { name: "label", label: "Title", widget: "string" }
               - { name: "description", label: "Subtitle (optional, only some slides have one)", widget: "string", required: false }
               - { name: "image", label: "Image", widget: "image" }
+
+  - name: "terms"
+    label: "Terms & Conditions Page"
+    files:
+      - name: "terms"
+        label: "Terms & Conditions Content"
+        file: "data/terms.json"
+        fields:
+          - { name: "intro", label: "Intro paragraph (under the heading)", widget: "text" }
+          - name: "sections"
+            label: "Sections"
+            widget: "list"
+            summary: "{{fields.heading}}"
+            fields:
+              - { name: "heading", label: "Section Heading", widget: "string" }
+              - { name: "body", label: "Section Text", widget: "text", hint: "Leave a blank line between paragraphs if you want more than one." }

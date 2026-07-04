@@ -1,4 +1,26 @@
 {
+  "nav_items": [
+    { "label": "Home", "link": "#top" },
+    { "label": "About", "link": "#about" },
+    { "label": "Services", "link": "#services" },
+    { "label": "Portfolio", "link": "portfolio.html" },
+    { "label": "Reviews", "link": "#reviews" }
+  ],
+  "homepage_text": {
+    "hero_heading_line1": "See the space",
+    "hero_heading_line2": "before it exists.",
+    "hero_subtext": "Photo-realistic 3D visualisations for interior designers, building companies, developers, architects and real estate agents — helping you sell the vision, before a single wall goes up.",
+    "manifesto_heading": "Clients don't buy a floor plan. They buy the feeling of already standing in the finished room — and that's exactly what a photo-realistic render gives them, well before the build begins.",
+    "services_heading": "How we can help",
+    "services_subtext": "A look at the work we create, and the benefits it brings to every project.",
+    "work_heading": "Step inside our renders",
+    "work_subtext": "Commercial, residential and property development projects — take a look inside some of our work.",
+    "about_heading": "Meet Melissa",
+    "reviews_heading": "What clients are saying",
+    "reviews_subtext": "See what interior designers, developers and building companies say about working with Visualise NZ.",
+    "cta_heading": "Let's visualise your next project.",
+    "cta_subtext": "Send through your plans, drawings or measurements and let's talk about what's possible."
+  },
   "contact": {
     "email": "hello@visualisenz.com",
     "phone_display": "021 500 602",
@@ -13,6 +35,7 @@
     "youtube": "https://www.youtube.com/@visualisenz",
     "linkedin": "https://www.linkedin.com/company/visualise-nz/"
   },
+  "footer_description": "Supporting the New Zealand design & building industry with professional 3D visualisation.",
   "bio_text": "Based on the Kāpiti Coast and working with clients throughout New Zealand, Melissa is easy to work with, realistic about pricing, and always keen to hear about the next project. Get in touch — she'd love to help bring your project to life.",
   "slideshow": [
     { "label": "Commercial Projects", "description": "", "image": "images/homepage/slide-1-commercial.jpg" },

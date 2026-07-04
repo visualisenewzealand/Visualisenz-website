@@ -14,18 +14,20 @@
 </head>
 <body>
 
-<header id="site-header" class="scrolled">
+<header id="site-header">
   <div class="wrap bar">
     <a href="index.html" class="brand" aria-label="Visualise NZ home">
       <span class="brand-mark"><img src="images/icons/logo.png" alt="Visualise NZ logo"></span>
     </a>
     <nav class="nav-links" id="nav-links">
+      <span id="nav-items-container" style="display:contents;">
       <a href="index.html">Home</a>
       <a href="index.html#about">About</a>
       <a href="index.html#services">Services</a>
       <a href="portfolio.html">Portfolio</a>
       <a href="index.html#reviews">Reviews</a>
-      <a href="index.html#contact" class="btn">Get in Touch</a>
+      </span>
+      <a href="mailto:hello@visualisenz.com" id="header-contact-btn" class="btn">Get in Touch</a>
     </nav>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
       <span></span><span></span><span></span>
@@ -38,12 +40,13 @@
     <div class="wrap">
       <span class="label">Good to Know</span>
       <h1 style="margin-top:0.9rem;">Terms &amp; Conditions</h1>
-      <p>The practical details behind every quote and every project — pricing, files, payment, and how your renders can be used and shared.</p>
+      <p id="terms-intro">The practical details behind every quote and every project — pricing, files, payment, and how your renders can be used and shared.</p>
     </div>
   </section>
 
   <section class="terms">
     <div class="wrap">
+      <div id="terms-sections">
       <h2>Pricing &amp; Amendments</h2>
       <p>Fixed price package includes two sets of amendments and up to four images per room. Additional amendments or images may incur additional cost. Specialised Virtual Tour and Virtual Reality software may also incur additional cost.</p>
       <p>All pricing is for trade only and is subject to change. Pricing may need to be negotiated for more complex projects. Visualise New Zealand is not currently required to register for or to pay GST, pricing may change as and when this is a requirement. Quotes are valid for 30 days from the date specified on the quote.</p>
@@ -59,6 +62,7 @@
 
       <h2>Intellectual Property &amp; Credit</h2>
       <p>The renders created by Visualise New Zealand remain the intellectual property of Visualise New Zealand. Trade clients (including their suppliers and clients) are welcome to share these renders on social media or other digital platforms, provided that @visualisenz is tagged or credited in the post or caption. Likewise when Visualise New Zealand shares renders featuring client's design or project, we will tag or credit the client's business to acknowledge their intellectual property.</p>
+      </div>
     </div>
   </section>
 </main>
@@ -68,12 +72,12 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <span class="footer-mark"><img src="images/icons/logo.png" alt="Visualise NZ logo"></span>
-        <p>Supporting the New Zealand design &amp; building industry with professional 3D visualisation.</p>
+        <p id="footer-description">Supporting the New Zealand design &amp; building industry with professional 3D visualisation.</p>
         <p style="margin-top:0.6rem; font-weight:600; letter-spacing:0.04em; color:rgba(255,255,255,0.8);">NZ Owned &amp; Operated</p>
       </div>
       <div class="footer-col">
         <span class="label">Site</span>
-        <ul>
+        <ul id="footer-nav-items-container">
           <li><a href="index.html">Home</a></li>
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#services">Services</a></li>

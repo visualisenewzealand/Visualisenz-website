@@ -22,12 +22,14 @@
       <span class="brand-mark"><img src="images/icons/logo.png" alt="Visualise NZ logo"></span>
     </a>
     <nav class="nav-links" id="nav-links">
+      <span id="nav-items-container" style="display:contents;">
       <a href="#top">Home</a>
       <a href="#about">About</a>
       <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
+      <a href="portfolio.html">Portfolio</a>
       <a href="#reviews">Reviews</a>
-      <a href="#contact" class="btn">Get in Touch</a>
+      </span>
+      <a href="mailto:hello@visualisenz.com" id="header-contact-btn" class="btn">Get in Touch</a>
     </nav>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
       <span></span><span></span><span></span>
@@ -41,8 +43,8 @@
   <section class="hero" style="background-image:url('images/homepage/hero.jpg');">
     <div class="wrap">
       <span class="hero-badge">NZ Owned &amp; Operated</span>
-      <h1>See the space<br>before it <em>exists.</em></h1>
-      <p class="sub">Photo-realistic 3D visualisations for interior designers, building companies, developers, architects and real estate agents — helping you sell the vision, before a single wall goes up.</p>
+      <h1 id="hero-heading">See the space<br>before it <em>exists.</em></h1>
+      <p class="sub" id="hero-subtext">Photo-realistic 3D visualisations for interior designers, building companies, developers, architects and real estate agents — helping you sell the vision, before a single wall goes up.</p>
       <div class="cta-row">
         <a href="portfolio.html" class="btn btn-outline">View the Portfolio</a>
         <a href="#contact" class="btn btn-solid" style="background:var(--white);color:var(--ink);">Start a Project</a>
@@ -54,7 +56,7 @@
     <div class="wrap">
       <div class="reveal">
         <span class="label">Why Visualise</span>
-        <h2 style="margin-top:1rem;">Clients don't buy a floor plan. They buy the feeling of already standing in the finished room — and that's exactly what a photo-realistic render gives them, well before the build begins.</h2>
+        <h2 id="manifesto-heading" style="margin-top:1rem;">Clients don't buy a floor plan. They buy the feeling of already standing in the finished room — and that's exactly what a photo-realistic render gives them, well before the build begins.</h2>
       </div>
       <div class="img-frame reveal">
         <img src="images/homepage/manifesto.jpg" alt="Photo-realistic render of a kitchen, part of the Riverside Home project, by Visualise NZ">
@@ -66,8 +68,8 @@
     <div class="wrap">
       <div class="section-head reveal">
         <span class="label">Services</span>
-        <h2 class="nowrap-d" style="margin-top:1rem;">How we can help</h2>
-        <p class="sub nowrap-d">A look at the work we create, and the benefits it brings to every project.</p>
+        <h2 class="nowrap-d" id="services-heading" style="margin-top:1rem;">How we can help</h2>
+        <p class="sub nowrap-d" id="services-subtext">A look at the work we create, and the benefits it brings to every project.</p>
       </div>
 
       <div class="slideshow reveal" id="slideshow">
@@ -113,8 +115,8 @@
     <div class="wrap">
       <div class="section-head reveal">
         <span class="label">Selected Work</span>
-        <h2 class="nowrap-d" style="margin-top:1rem;">Step inside our renders</h2>
-        <p class="sub nowrap-d">Commercial, residential and property development projects — take a look inside some of our work.</p>
+        <h2 class="nowrap-d" id="work-heading" style="margin-top:1rem;">Step inside our renders</h2>
+        <p class="sub nowrap-d" id="work-subtext">Commercial, residential and property development projects — take a look inside some of our work.</p>
       </div>
 
       <div class="work-grid">
@@ -177,7 +179,7 @@
       </div>
       <div class="reveal">
         <span class="label">Who's Behind Visualise NZ</span>
-        <h2 style="margin-top:1rem;">Meet Melissa</h2>
+        <h2 id="about-heading" style="margin-top:1rem;">Meet Melissa</h2>
         <p class="bio">Melissa's career began in marketing — a degree, followed by years in marketing communications for corporate organisations across New Zealand, the UK and Australia, developing a sharp instinct for how to present an idea so it actually lands.</p>
         <p class="bio" style="margin-top:1.1rem;">That instinct became the foundation for a progressive move into interior design, where she holds a Diploma in Interior Design along with further study in commercial design, kitchen and bathroom design, and Sketchup. It's this combination — genuine design training, backed by a career built on communicating ideas clearly — that shapes every render she produces: never just a pretty picture, always built to help you sell the vision.</p>
         <p class="bio" id="bio-text" style="margin-top:1.1rem;">Based on the Kāpiti Coast and working with clients throughout New Zealand, Melissa is easy to work with, realistic about pricing, and always keen to hear about the next project. Get in touch — she'd love to help bring your project to life.</p>
@@ -189,8 +191,8 @@
     <div class="wrap">
       <div class="section-head reveal">
         <span class="label">Trusted By The Trade</span>
-        <h2 style="margin-top:1rem;">What clients are saying</h2>
-        <p class="sub" style="margin-left:auto;margin-right:auto;">See what interior designers, developers and building companies say about working with Visualise NZ.</p>
+        <h2 id="reviews-heading" style="margin-top:1rem;">What clients are saying</h2>
+        <p class="sub" id="reviews-subtext" style="margin-left:auto;margin-right:auto;">See what interior designers, developers and building companies say about working with Visualise NZ.</p>
       </div>
       <a href="https://share.google/uz5BSb3SUm9aPpeZi" id="reviews-btn" target="_blank" rel="noopener" class="btn btn-solid" style="background:var(--plum);color:var(--white);">Read our reviews on Google</a>
     </div>
@@ -198,8 +200,8 @@
 
   <section class="final-cta" style="background-image:url('images/homepage/final-cta.jpg');">
     <div class="wrap">
-      <h2 class="reveal">Let's visualise your next project.</h2>
-      <p class="sub reveal">Send through your plans, drawings or measurements and let's talk about what's possible.</p>
+      <h2 class="reveal" id="cta-heading">Let's visualise your next project.</h2>
+      <p class="sub reveal" id="cta-subtext">Send through your plans, drawings or measurements and let's talk about what's possible.</p>
       <div class="cta-row reveal">
         <a href="mailto:hello@visualisenz.com" id="chat-btn" class="btn btn-outline">Let's Chat</a>
       </div>
@@ -213,16 +215,16 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <span class="footer-mark"><img src="images/icons/logo.png" alt="Visualise NZ logo"></span>
-        <p>Supporting the New Zealand design &amp; building industry with professional 3D visualisation.</p>
+        <p id="footer-description">Supporting the New Zealand design &amp; building industry with professional 3D visualisation.</p>
         <p style="margin-top:0.6rem; font-weight:600; letter-spacing:0.04em; color:rgba(255,255,255,0.8);">NZ Owned &amp; Operated</p>
       </div>
       <div class="footer-col">
         <span class="label">Site</span>
-        <ul>
+        <ul id="footer-nav-items-container">
           <li><a href="#top">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="#reviews">Reviews</a></li>
           <li><a href="terms.html">Terms &amp; Conditions</a></li>
         </ul>

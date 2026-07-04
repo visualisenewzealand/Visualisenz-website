@@ -39,10 +39,63 @@ document.addEventListener('DOMContentLoaded', async function () {
     const chatBtn = document.getElementById('chat-btn');
     if (chatBtn) chatBtn.href = 'mailto:' + settings.contact.email;
 
+    const headerContactBtn = document.getElementById('header-contact-btn');
+    if (headerContactBtn) headerContactBtn.href = 'mailto:' + settings.contact.email;
+
+    const footerDesc = document.getElementById('footer-description');
+    if (footerDesc && settings.footer_description) footerDesc.textContent = settings.footer_description;
+
     const bioEl = document.getElementById('bio-text');
     if (bioEl && settings.bio_text) bioEl.textContent = settings.bio_text;
 
-    // Homepage slideshow
+    // Homepage text blocks
+    const ht = settings.homepage_text;
+    if (ht) {
+      const heroH = document.getElementById('hero-heading');
+      if (heroH && ht.hero_heading_line1 && ht.hero_heading_line2) {
+        heroH.innerHTML = `${esc(ht.hero_heading_line1)}<br>${esc(ht.hero_heading_line2).replace(/(exists\.?)$/i, '<em>$1</em>')}`;
+      }
+      const setText = (id, val) => { const el = document.getElementById(id); if (el && val) el.textContent = val; };
+      setText('hero-subtext', ht.hero_subtext);
+      setText('manifesto-heading', ht.manifesto_heading);
+      setText('services-heading', ht.services_heading);
+      setText('services-subtext', ht.services_subtext);
+      setText('work-heading', ht.work_heading);
+      setText('work-subtext', ht.work_subtext);
+      setText('about-heading', ht.about_heading);
+      setText('reviews-heading', ht.reviews_heading);
+      setText('reviews-subtext', ht.reviews_subtext);
+      setText('cta-heading', ht.cta_heading);
+      setText('cta-subtext', ht.cta_subtext);
+    }
+
+    // Navigation (reorderable via CMS) — rendered correctly whether we're on the homepage or another page
+    if (settings.nav_items && settings.nav_items.length) {
+      const isHomepage = !!document.querySelector('.hero');
+      const currentPath = location.pathname.split('/').pop() || 'index.html';
+
+      function navHref(link) {
+        if (link.startsWith('#')) return isHomepage ? link : 'index.html' + link;
+        return link;
+      }
+      function isCurrent(link) {
+        return !link.startsWith('#') && link === currentPath;
+      }
+
+      const headerNavEl = document.getElementById('nav-items-container');
+      if (headerNavEl) {
+        headerNavEl.innerHTML = settings.nav_items.map(item =>
+          `<a href="${esc(navHref(item.link))}"${isCurrent(item.link) ? ' class="current"' : ''}>${esc(item.label)}</a>`
+        ).join('\n');
+      }
+      const footerNavEl = document.getElementById('footer-nav-items-container');
+      if (footerNavEl) {
+        footerNavEl.innerHTML = settings.nav_items.map(item =>
+          `<li><a href="${esc(navHref(item.link))}">${esc(item.label)}</a></li>`
+        ).join('\n') + '\n<li><a href="terms.html">Terms &amp; Conditions</a></li>';
+      }
+    }
+
     const slideshow = document.getElementById('slideshow');
     if (slideshow && settings.slideshow && settings.slideshow.length) {
       const slidesHtml = settings.slideshow.map((s, i) => `
@@ -62,7 +115,8 @@ document.addEventListener('DOMContentLoaded', async function () {
     let projects;
     try {
       const res = await fetch('data/portfolio.json');
-      projects = await res.json();
+      const data = await res.json();
+      projects = data.projects;
     } catch (e) {
       console.error('Could not load portfolio data', e);
       return;
@@ -73,7 +127,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const workGrid = document.querySelector('.work-grid');
     if (workGrid) {
       workGrid.innerHTML = projects.map(p => `
-        <a class="work-tile reveal" href="portfolio.html#${esc(p.category)}">
+        <a class="work-tile reveal" href="portfolio.html#${esc(p.slug)}">
           <img src="${esc(p.homepage_tile_image)}" alt="${esc(p.title)} render">
           <div class="work-tile-text"><span class="cat">${esc(p.category_label)}</span><h3>${esc(p.title)}</h3></div>
         </a>`).join('');
@@ -107,7 +161,7 @@ document.addEventListener('DOMContentLoaded', async function () {
           return `
           <article class="project" id="${esc(p.slug)}">
             <div class="project-head">
-              <h3>${esc(p.title)}</h3>
+              <h3>${p.external_link ? `<a href="${esc(p.external_link)}" target="_blank" rel="noopener">${esc(p.title)}</a>` : esc(p.title)}</h3>
               <div class="project-meta"><span class="label">${esc(p.category_label)}</span><span class="credit">${esc(p.credit)}</span></div>
             </div>
             <div class="${gridClass}">${imagesHtml}</div>
@@ -126,5 +180,27 @@ document.addEventListener('DOMContentLoaded', async function () {
     }
   }
 
-  await Promise.all([loadSettings(), loadPortfolio()]);
+  // ---------- Terms & Conditions page content ----------
+  async function loadTerms() {
+    const introEl = document.getElementById('terms-intro');
+    const sectionsEl = document.getElementById('terms-sections');
+    if (!introEl && !sectionsEl) return;
+    let terms;
+    try {
+      const res = await fetch('data/terms.json');
+      terms = await res.json();
+    } catch (e) {
+      console.error('Could not load terms content', e);
+      return;
+    }
+    if (introEl && terms.intro) introEl.textContent = terms.intro;
+    if (sectionsEl && terms.sections && terms.sections.length) {
+      sectionsEl.innerHTML = terms.sections.map(s => `
+        <h2>${esc(s.heading)}</h2>
+        ${(s.body || '').split('\n\n').map(p => `<p>${esc(p)}</p>`).join('\n')}
+      `).join('\n');
+    }
+  }
+
+  await Promise.all([loadSettings(), loadPortfolio(), loadTerms()]);
 });
