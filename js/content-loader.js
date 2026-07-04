@@ -132,6 +132,7 @@ document.addEventListener('DOMContentLoaded', async function () {
       return;
     }
     projects.sort((a, b) => a.order - b.order);
+    window._portfolioProjects = projects;
 
     // Homepage "Step inside our renders" tile grid
     const workGrid = document.querySelector('.work-grid');
@@ -157,7 +158,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         if (!items.length) return '';
         const articlesHtml = items.map(p => {
           const gridClass = p.layout === 'pair' ? 'project-grid pair' : 'project-grid';
-          const imagesHtml = p.images.map(img => `<div class="pg-item"><img src="${esc(img.image)}" alt="${esc(img.alt)}"></div>`).join('');
+          const imagesHtml = p.images.map((img, i) => `<div class="pg-item"><img src="${esc(img.image)}" alt="${esc(img.alt)}" class="lightbox-trigger" data-project="${esc(p.slug)}" data-index="${i}" tabindex="0"></div>`).join('');
           let videoHtml = '';
           if (p.videos && p.videos.length === 1) {
             const v = p.videos[0];

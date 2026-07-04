@@ -138,7 +138,7 @@ nav.nav-links{ display:flex; align-items:center; gap:2.1rem; }
       box-shadow:-6px 0 24px rgba(11,13,59,0.12); overflow-y:auto;
     }
     .nav-links.open{ transform:translateX(0); }
-    .nav-links a:not(.btn){ font-size:1.4rem; color:var(--ink); }
+    .nav-links a:not(.btn){ font-size:1.15rem; color:var(--ink); }
     .nav-toggle{ display:flex; }
     .brand-mark{ width:96px; height:96px; }
     .brand-mark img{ height:66px; width:66px; }
@@ -327,9 +327,9 @@ footer{ background:var(--plum); color:rgba(255,255,255,0.8); padding:4.5rem 0 2r
 
 
 @media (max-width:900px){
-    .nav-links{ position:fixed; inset:0 0 0 26%; background:var(--paper); flex-direction:column; justify-content:flex-start; align-items:flex-start; gap:1.5rem; padding:6rem var(--gutter) 2rem; transform:translateX(100%); transition:transform .4s ease; box-shadow:-6px 0 24px rgba(11,13,59,0.12); overflow-y:auto; }
+    .nav-links{ position:fixed; inset:0 0 0 30%; background:var(--paper); flex-direction:column; justify-content:flex-start; align-items:flex-start; gap:1.1rem; padding:2.4rem var(--gutter) 1.5rem; transform:translateX(100%); transition:transform .4s ease; box-shadow:-6px 0 24px rgba(11,13,59,0.12); overflow-y:auto; }
     .nav-links.open{ transform:translateX(0); }
-    .nav-links a:not(.btn){ font-size:1.4rem; }
+    .nav-links a:not(.btn){ font-size:1.15rem; }
     .nav-toggle{ display:flex; }
     .brand-mark{ width:96px; height:96px; }
     .brand-mark img{ height:66px; width:66px; }
@@ -456,9 +456,9 @@ a:hover{ text-decoration:underline; }
 
 
 @media (max-width:900px){
-    .nav-links{ position:fixed; inset:0 0 0 26%; background:var(--paper); flex-direction:column; justify-content:flex-start; align-items:flex-start; gap:1.5rem; padding:6rem var(--gutter) 2rem; transform:translateX(100%); transition:transform .4s ease; box-shadow:-6px 0 24px rgba(11,13,59,0.12); overflow-y:auto; }
+    .nav-links{ position:fixed; inset:0 0 0 30%; background:var(--paper); flex-direction:column; justify-content:flex-start; align-items:flex-start; gap:1.1rem; padding:2.4rem var(--gutter) 1.5rem; transform:translateX(100%); transition:transform .4s ease; box-shadow:-6px 0 24px rgba(11,13,59,0.12); overflow-y:auto; }
     .nav-links.open{ transform:translateX(0); }
-    .nav-links a:not(.btn){ font-size:1.4rem; }
+    .nav-links a:not(.btn){ font-size:1.15rem; }
     .nav-toggle{ display:flex; }
     .brand-mark{ width:96px; height:96px; }
     .brand-mark img{ height:66px; width:66px; }
@@ -484,4 +484,30 @@ a:hover{ text-decoration:underline; }
 .terms p{ color:var(--ink-soft); margin-bottom:1rem; }
 
 .terms p:last-child{ margin-bottom:0; }
+
+/* Image lightbox (portfolio project images) */
+.pg-item img.lightbox-trigger{ cursor:zoom-in; }
+
+.lightbox{ display:none; position:fixed; inset:0; z-index:1000; background:rgba(11,13,59,0.94); align-items:center; justify-content:center; }
+.lightbox.open{ display:flex; }
+
+.lightbox-content{ max-width:88vw; max-height:88vh; display:flex; flex-direction:column; align-items:center; }
+.lightbox-content img{ max-width:88vw; max-height:76vh; object-fit:contain; box-shadow:0 20px 60px rgba(0,0,0,0.5); }
+
+.lightbox-caption{ color:rgba(255,255,255,0.85); font-size:0.9rem; margin-top:1rem; text-align:center; max-width:80vw; }
+.lightbox-counter{ color:rgba(255,255,255,0.55); font-size:0.78rem; margin-top:0.4rem; font-weight:600; letter-spacing:0.06em; }
+
+.lightbox-close{ position:absolute; top:1.2rem; right:1.5rem; background:none; border:0; color:var(--white); font-size:2.4rem; line-height:1; cursor:pointer; padding:0.4rem 0.7rem; }
+.lightbox-close:hover{ color:var(--aqua); }
+
+.lightbox-arrow{ position:absolute; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.1); border:0; color:var(--white); font-size:1.1rem; width:52px; height:52px; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .2s ease; }
+.lightbox-arrow:hover{ background:rgba(255,255,255,0.22); }
+.lightbox-prev{ left:1.2rem; }
+.lightbox-next{ right:1.2rem; }
+
+@media (max-width:700px){
+  .lightbox-arrow{ width:42px; height:42px; font-size:0.95rem; }
+  .lightbox-close{ top:0.6rem; right:0.8rem; font-size:2rem; }
+  .lightbox-content img{ max-height:66vh; }
+}
 
