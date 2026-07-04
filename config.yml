@@ -1,0 +1,102 @@
+# Use DecapBridge PKCE auth (required)
+backend:
+  name: git-gateway
+  repo: visualisenewzealand/Visualisenz-website
+  branch: main
+  auth_type: pkce
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/596d7309-57f1-4364-804c-bbd2d2c64270/pkce
+  auth_token_endpoint: /sites/596d7309-57f1-4364-804c-bbd2d2c64270/token
+  gateway_url: https://gateway.decapbridge.com
+  # See who did what (optional)
+  commit_messages:
+    create: Create {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    update: Update {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    delete: Delete {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    uploadMedia: Upload "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    deleteMedia: Delete "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    openAuthoring: Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge
+# Enable PKCE fields (optional, recommended)
+auth:
+  email_claim: email
+  first_name_claim: first_name
+  last_name_claim: last_name
+  avatar_url_claim: avatar_url
+# Better Decap + Bridge logo (optional)
+logo_url: https://decapbridge.com/decapcms-with-bridge.svg
+# Add site links in Decap CMS (optional)
+site_url: https://visualisenz.com
+
+media_folder: "images/uploads"
+public_folder: "images/uploads"
+
+collections:
+  - name: "portfolio"
+    label: "Portfolio Projects"
+    files:
+      - name: "projects"
+        label: "All Projects"
+        file: "data/portfolio.json"
+        fields:
+          - name: "projects"
+            label: "Projects"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.category_label}}"
+            fields:
+              - { name: "slug", label: "URL Slug (lowercase, hyphens, no spaces)", widget: "string", hint: "e.g. wellington-kitchen. Only change this if you know what you're doing." }
+              - { name: "order", label: "Display Order (lower numbers show first within a category)", widget: "number" }
+              - { name: "title", label: "Project Title", widget: "string" }
+              - { name: "category", label: "Category", widget: "select", options: [ { label: "Property Developments", value: "property" }, { label: "Commercial Projects", value: "commercial" }, { label: "Residential Projects", value: "residential" } ] }
+              - { name: "category_label", label: "Category Label (small text shown above the title on the Portfolio page)", widget: "string" }
+              - { name: "credit", label: "Credit Line", widget: "string", hint: "e.g. Interior design by Visualise NZ" }
+              - { name: "layout", label: "Image Layout", widget: "select", options: [ { label: "Standard grid", value: "grid" }, { label: "Side-by-side pair (for 2-image projects)", value: "pair" } ] }
+              - name: "images"
+                label: "Images"
+                widget: "list"
+                summary: "{{fields.alt}}"
+                fields:
+                  - { name: "image", label: "Image", widget: "image" }
+                  - { name: "alt", label: "Short description (for accessibility & search engines)", widget: "string" }
+              - name: "videos"
+                label: "Videos (leave empty if none)"
+                widget: "list"
+                required: false
+                fields:
+                  - { name: "video_id", label: "YouTube Video ID", widget: "string", hint: "The part of the YouTube link after youtu.be/ — e.g. UeZt1j4KiVU" }
+                  - { name: "label", label: "Label (only needed if this project has more than one video)", widget: "string", required: false }
+              - { name: "homepage_tile_image", label: "Homepage Tile Image (the single image shown on the homepage 'Step inside our renders' section)", widget: "image" }
+
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "general"
+        label: "Contact, Socials & Slideshow"
+        file: "data/settings.json"
+        fields:
+          - name: "contact"
+            label: "Contact Details"
+            widget: "object"
+            fields:
+              - { name: "email", label: "Email Address", widget: "string" }
+              - { name: "phone_display", label: "Phone Number (as shown to visitors)", widget: "string" }
+              - { name: "phone_link", label: "Phone Number (dial format, e.g. +64211234567 — no spaces)", widget: "string" }
+              - { name: "address", label: "Address", widget: "string" }
+              - { name: "nzbn", label: "NZBN", widget: "string" }
+          - { name: "reviews_url", label: "Google Reviews Link", widget: "string" }
+          - name: "socials"
+            label: "Social Media Links"
+            widget: "object"
+            fields:
+              - { name: "facebook", label: "Facebook URL", widget: "string", required: false }
+              - { name: "instagram", label: "Instagram URL", widget: "string", required: false }
+              - { name: "youtube", label: "YouTube URL", widget: "string", required: false }
+              - { name: "linkedin", label: "LinkedIn URL", widget: "string", required: false }
+          - { name: "bio_text", label: "About / Bio Text (Meet Melissa section)", widget: "text" }
+          - name: "slideshow"
+            label: "Services Slideshow (the 8 auto-rotating slides on the homepage)"
+            widget: "list"
+            summary: "{{fields.label}}"
+            fields:
+              - { name: "label", label: "Title", widget: "string" }
+              - { name: "description", label: "Subtitle (optional, only some slides have one)", widget: "string", required: false }
+              - { name: "image", label: "Image", widget: "image" }
