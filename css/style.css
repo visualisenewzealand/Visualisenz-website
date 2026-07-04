@@ -133,9 +133,9 @@ nav.nav-links{ display:flex; align-items:center; gap:2.1rem; }
 @media (max-width:900px){
     .nav-links{
       position:fixed; inset:0 0 0 26%; background:var(--paper);
-      flex-direction:column; justify-content:center; align-items:flex-start; gap:1.8rem;
-      padding:2rem var(--gutter); transform:translateX(100%); transition:transform .4s ease;
-      box-shadow:-6px 0 24px rgba(11,13,59,0.12);
+      flex-direction:column; justify-content:flex-start; align-items:flex-start; gap:1.5rem;
+      padding:6rem var(--gutter) 2rem; transform:translateX(100%); transition:transform .4s ease;
+      box-shadow:-6px 0 24px rgba(11,13,59,0.12); overflow-y:auto;
     }
     .nav-links.open{ transform:translateX(0); }
     .nav-links a:not(.btn){ font-size:1.4rem; color:var(--ink); }
@@ -327,7 +327,7 @@ footer{ background:var(--plum); color:rgba(255,255,255,0.8); padding:4.5rem 0 2r
 
 
 @media (max-width:900px){
-    .nav-links{ position:fixed; inset:0 0 0 26%; background:var(--paper); flex-direction:column; justify-content:center; align-items:flex-start; gap:1.8rem; padding:2rem var(--gutter); transform:translateX(100%); transition:transform .4s ease; box-shadow:-6px 0 24px rgba(11,13,59,0.12); }
+    .nav-links{ position:fixed; inset:0 0 0 26%; background:var(--paper); flex-direction:column; justify-content:flex-start; align-items:flex-start; gap:1.5rem; padding:6rem var(--gutter) 2rem; transform:translateX(100%); transition:transform .4s ease; box-shadow:-6px 0 24px rgba(11,13,59,0.12); overflow-y:auto; }
     .nav-links.open{ transform:translateX(0); }
     .nav-links a:not(.btn){ font-size:1.4rem; }
     .nav-toggle{ display:flex; }
@@ -456,7 +456,7 @@ a:hover{ text-decoration:underline; }
 
 
 @media (max-width:900px){
-    .nav-links{ position:fixed; inset:0 0 0 26%; background:var(--paper); flex-direction:column; justify-content:center; align-items:flex-start; gap:1.8rem; padding:2rem var(--gutter); transform:translateX(100%); transition:transform .4s ease; box-shadow:-6px 0 24px rgba(11,13,59,0.12); }
+    .nav-links{ position:fixed; inset:0 0 0 26%; background:var(--paper); flex-direction:column; justify-content:flex-start; align-items:flex-start; gap:1.5rem; padding:6rem var(--gutter) 2rem; transform:translateX(100%); transition:transform .4s ease; box-shadow:-6px 0 24px rgba(11,13,59,0.12); overflow-y:auto; }
     .nav-links.open{ transform:translateX(0); }
     .nav-links a:not(.btn){ font-size:1.4rem; }
     .nav-toggle{ display:flex; }
