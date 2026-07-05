@@ -1,32 +1,33 @@
 {
   "projects": [
     {
-      "layout": "grid",
       "slug": "punga-ridge",
       "order": 1,
-      "external_link": "",
-      "category_label": "Property Development",
       "title": "Punga Ridge",
+      "category": "property",
+      "category_label": "Property Development",
+      "credit": "Punga Ridge Development by Red Earth Homes · Piha Homes by Greenhaven Homes",
+      "layout": "grid",
       "images": [
         {
           "image": "images/portfolio/punga-ridge-1.jpg",
-          "alt": "Punga Ridge development aerial"
+          "alt": "Punga Ridge development aerial render"
         },
         {
           "image": "images/portfolio/punga-ridge-2.jpg",
-          "alt": "Punga Ridge patio"
+          "alt": "Punga Ridge exterior render, evening"
         },
         {
           "image": "images/portfolio/punga-ridge-3.jpg",
-          "alt": "Punga Ridge entrance"
+          "alt": "Punga Ridge driveway render"
         },
         {
           "image": "images/portfolio/punga-ridge-4.jpg",
-          "alt": "Piha Homes by Greenhaven Homes"
+          "alt": "Punga Ridge exterior render with family"
         },
         {
           "image": "images/portfolio/punga-ridge-5.jpg",
-          "alt": "Piha Home by Greenhaven Homes"
+          "alt": "Punga Ridge house exterior render"
         }
       ],
       "videos": [
@@ -35,37 +36,37 @@
           "label": ""
         }
       ],
-      "credit": "Punga Ridge Development by Red Earth Homes · Piha Homes by Greenhaven Homes",
       "homepage_tile_image": "images/homepage/work-punga-ridge.jpg",
-      "category": "property"
+      "external_link": ""
     },
     {
-      "layout": "grid",
       "slug": "upper-hutt-development",
       "order": 2,
-      "external_link": "",
-      "category_label": "Property Development",
       "title": "Upper Hutt Development",
+      "category": "property",
+      "category_label": "Property Development",
+      "credit": "Property Development by Devonlee Homes",
+      "layout": "grid",
       "images": [
         {
           "image": "images/portfolio/upper-hutt-development-1.jpg",
-          "alt": "Upper Hutt development"
+          "alt": "Upper Hutt development front exterior render"
         },
         {
           "image": "images/portfolio/upper-hutt-development-2.jpg",
-          "alt": "House 1 kitchen island"
+          "alt": "Upper Hutt development kitchen island render"
         },
         {
           "image": "images/portfolio/upper-hutt-development-3.jpg",
-          "alt": "House 1 Kitchen"
+          "alt": "Upper Hutt development kitchen island render, alternate angle"
         },
         {
           "image": "images/portfolio/upper-hutt-development-4.jpg",
-          "alt": "House 1 open plan living"
+          "alt": "Upper Hutt development living, dining and kitchen render"
         },
         {
           "image": "images/portfolio/upper-hutt-development-5.jpg",
-          "alt": "House 1 kitchen"
+          "alt": "Upper Hutt development kitchen back wall render"
         }
       ],
       "videos": [
@@ -74,105 +75,105 @@
           "label": ""
         }
       ],
-      "credit": "Property Development by Devonlee Homes",
       "homepage_tile_image": "images/homepage/work-upper-hutt-development.jpg",
-      "category": "property"
+      "external_link": ""
     },
     {
-      "layout": "grid",
       "slug": "tranquillity-day-spa",
       "order": 3,
-      "external_link": "",
-      "category_label": "Commercial Projects",
       "title": "Tranquillity Day Spa",
+      "category": "commercial",
+      "category_label": "Commercial Projects",
+      "credit": "Interior design by Visualise NZ",
+      "layout": "grid",
       "images": [
         {
           "image": "images/portfolio/tranquillity-day-spa-1.jpg",
-          "alt": "Tranquillity Day Spa entrance"
+          "alt": "Tranquillity Day Spa exterior render"
         },
         {
           "image": "images/portfolio/tranquillity-day-spa-2.jpg",
-          "alt": "Tranquillity Day Spa reception"
+          "alt": "Tranquillity Day Spa reception render"
         },
         {
           "image": "images/portfolio/tranquillity-day-spa-3.jpg",
-          "alt": "Tranquillity Day Spa single treatment room"
+          "alt": "Tranquillity Day Spa treatment room render"
         },
         {
           "image": "images/portfolio/tranquillity-day-spa-4.jpg",
-          "alt": "Tranquillity Day Spa double treatment room"
+          "alt": "Tranquillity Day Spa treatment room render, two beds"
         },
         {
           "image": "images/portfolio/tranquillity-day-spa-5.jpg",
-          "alt": "Tranquillity Day Spa snail shower"
+          "alt": "Tranquillity Day Spa outdoor snail shower render"
         }
       ],
       "videos": [],
-      "credit": "Interior concepts by Visualise NZ",
       "homepage_tile_image": "images/homepage/work-tranquillity-day-spa.jpg",
-      "category": "commercial"
+      "external_link": ""
     },
     {
-      "layout": "grid",
       "slug": "pod",
       "order": 4,
-      "external_link": "",
-      "category_label": "Commercial Projects",
       "title": "Pod",
+      "category": "commercial",
+      "category_label": "Commercial Projects",
+      "credit": "Interior design by Visualise NZ",
+      "layout": "grid",
       "images": [
         {
           "image": "images/portfolio/pod-1.jpg",
-          "alt": "Pod entrance"
+          "alt": "Pod entrance render"
         },
         {
           "image": "images/portfolio/pod-2.jpg",
-          "alt": "Pod reception"
+          "alt": "Pod reception render"
         },
         {
           "image": "images/portfolio/pod-3.jpg",
-          "alt": "Pod breakout space"
+          "alt": "Pod breakout space render"
         },
         {
           "image": "images/portfolio/pod-4.jpg",
-          "alt": "Pod kitchenette"
+          "alt": "Pod kitchenette render"
         },
         {
           "image": "images/portfolio/pod-5.jpg",
-          "alt": "Pod bathroom"
+          "alt": "Pod bathroom vanities render"
         }
       ],
       "videos": [],
-      "credit": "Interior concepts by Visualise NZ",
       "homepage_tile_image": "images/homepage/work-pod.jpg",
-      "category": "commercial"
+      "external_link": ""
     },
     {
-      "layout": "grid",
       "slug": "piha-home",
       "order": 5,
-      "external_link": "",
-      "category_label": "Residential Projects",
       "title": "Piha Home",
+      "category": "residential",
+      "category_label": "Residential Projects",
+      "credit": "Property Development by Red Earth Homes · Piha Home by Greenhaven Homes · Kitchen Design by Visualise NZ",
+      "layout": "grid",
       "images": [
         {
           "image": "images/portfolio/piha-home-1.jpg",
-          "alt": "Piha Home exterior"
+          "alt": "Piha Home exterior render"
         },
         {
           "image": "images/portfolio/piha-home-2.jpg",
-          "alt": "Piha Home kitchen"
+          "alt": "Piha Home kitchen render"
         },
         {
           "image": "images/portfolio/piha-home-3.jpg",
-          "alt": "Piha Home lounge"
+          "alt": "Piha Home lounge render"
         },
         {
           "image": "images/portfolio/piha-home-4.jpg",
-          "alt": "Piha Home kitchen"
+          "alt": "Piha Home kitchen render, alternate angle"
         },
         {
           "image": "images/portfolio/piha-home-5.jpg",
-          "alt": "Piha Home bedroom"
+          "alt": "Piha Home bedroom render"
         }
       ],
       "videos": [
@@ -181,81 +182,81 @@
           "label": ""
         }
       ],
-      "credit": "Property Development by Red Earth Homes · Piha Home by Greenhaven Homes · Kitchen Concept by Visualise NZ",
       "homepage_tile_image": "images/homepage/work-piha-home.jpg",
-      "category": "residential"
+      "external_link": ""
     },
     {
-      "layout": "grid",
       "slug": "riverside-home",
       "order": 6,
-      "external_link": "",
-      "category_label": "Residential Projects",
       "title": "Riverside Home",
+      "category": "residential",
+      "category_label": "Residential Projects",
+      "credit": "Interior design by Visualise NZ",
+      "layout": "grid",
       "images": [
         {
           "image": "images/portfolio/riverside-home-1.jpg",
-          "alt": "Riverside Home living, dining and outdoor living"
+          "alt": "Riverside Home living and dining render with mountain views"
         },
         {
           "image": "images/portfolio/riverside-home-2.jpg",
-          "alt": "Riverside Home kitchen"
+          "alt": "Riverside Home kitchen render"
         },
         {
           "image": "images/portfolio/riverside-home-3.jpg",
-          "alt": "Riverside Home kitchen"
+          "alt": "Riverside Home kitchen render, alternate angle"
         },
         {
           "image": "images/portfolio/riverside-home-4.jpg",
-          "alt": "Riverside Home laundry"
+          "alt": "Riverside Home laundry render"
         },
         {
           "image": "images/portfolio/riverside-home-5.jpg",
-          "alt": "Riverside Home pantry"
+          "alt": "Riverside Home pantry render"
         }
       ],
       "videos": [],
-      "credit": "Interior concepts by Visualise NZ",
       "homepage_tile_image": "images/homepage/work-riverside-home.jpg",
-      "category": "residential"
+      "external_link": ""
     },
     {
-      "layout": "pair",
       "slug": "luxurious-bathroom",
       "order": 7,
-      "external_link": "",
-      "category_label": "Residential Projects",
       "title": "Luxurious Bathroom",
+      "category": "residential",
+      "category_label": "Residential Projects",
+      "credit": "Interior design by Visualise NZ",
+      "layout": "pair",
       "images": [
         {
           "image": "images/portfolio/luxurious-bathroom-1.jpg",
-          "alt": "Luxurious Bathroom"
+          "alt": "Luxurious Bathroom render"
         },
         {
           "image": "images/portfolio/luxurious-bathroom-2.jpg",
-          "alt": "Luxurious Bathroom freestanding tub"
+          "alt": "Luxurious Bathroom render, overhead view of freestanding tub"
         }
       ],
       "videos": [],
-      "credit": "Interior concepts by Visualise NZ",
       "homepage_tile_image": "images/homepage/work-luxurious-bathroom.jpg",
-      "category": "residential"
+      "external_link": ""
     },
     {
-      "layout": "pair",
       "slug": "pink-kitchen",
       "order": 8,
-      "external_link": "",
-      "category_label": "Residential Projects",
       "title": "Pink Kitchen",
+      "category": "residential",
+      "category_label": "Residential Projects",
+      "credit": "Interior design by Wild Bird Interior Design",
+      "layout": "pair",
       "images": [
         {
           "image": "images/portfolio/pink-kitchen-1.jpg",
-          "alt": "Pink Kitchen"
+          "alt": "Pink Kitchen render"
         },
         {
           "image": "images/portfolio/pink-kitchen-2.jpg",
-          "alt": "Pink Kitchen with built-in Laundry"
+          "alt": "Pink Kitchen render, alternate angle"
         }
       ],
       "videos": [
@@ -264,25 +265,25 @@
           "label": ""
         }
       ],
-      "credit": "Interior design by Wild Bird Interior Design",
       "homepage_tile_image": "images/homepage/work-pink-kitchen.jpg",
-      "category": "residential"
+      "external_link": ""
     },
     {
-      "layout": "pair",
       "slug": "queenstown-kitchen",
       "order": 9,
-      "external_link": "",
-      "category_label": "Residential Projects",
       "title": "Queenstown Kitchen",
+      "category": "residential",
+      "category_label": "Residential Projects",
+      "credit": "Interior design by Little Sparrow Interiors",
+      "layout": "pair",
       "images": [
         {
           "image": "images/portfolio/queenstown-kitchen-1.jpg",
-          "alt": "Queenstown Kitchen Option 1 - Dark Cabinetry"
+          "alt": "Queenstown Kitchen render, material option 1"
         },
         {
           "image": "images/portfolio/queenstown-kitchen-2.jpg",
-          "alt": "Queenstown Kitchen Option 2 - Light Cabinetry"
+          "alt": "Queenstown Kitchen render, material option 2"
         }
       ],
       "videos": [
@@ -295,25 +296,25 @@
           "label": "Material Option 2"
         }
       ],
-      "credit": "Interior design by Little Sparrow Interiors",
       "homepage_tile_image": "images/homepage/work-queenstown-kitchen.jpg",
-      "category": "residential"
+      "external_link": ""
     },
     {
-      "layout": "pair",
       "slug": "wellington-kitchen",
       "order": 10,
-      "external_link": "",
-      "category_label": "Residential Projects",
       "title": "Wellington Kitchen",
+      "category": "residential",
+      "category_label": "Residential Projects",
+      "credit": "Interior design by Stylish Interiors",
+      "layout": "pair",
       "images": [
         {
           "image": "images/portfolio/wellington-kitchen-1.jpg",
-          "alt": "Wellington Kitchen"
+          "alt": "Wellington Kitchen render"
         },
         {
           "image": "images/portfolio/wellington-kitchen-2.jpg",
-          "alt": "Wellington Kitchen"
+          "alt": "Wellington Kitchen render, alternate angle"
         }
       ],
       "videos": [
@@ -322,31 +323,30 @@
           "label": ""
         }
       ],
-      "credit": "Interior design by Stylish Interiors",
       "homepage_tile_image": "images/homepage/work-wellington-kitchen.jpg",
-      "category": "residential"
+      "external_link": ""
     },
     {
-      "layout": "pair",
       "slug": "wellington-bathroom",
       "order": 11,
-      "external_link": "",
-      "category_label": "Residential Projects",
       "title": "Wellington Bathroom",
+      "category": "residential",
+      "category_label": "Residential Projects",
+      "credit": "Interior design by Hello Home Interiors",
+      "layout": "pair",
       "images": [
         {
           "image": "images/portfolio/wellington-bathroom-1.jpg",
-          "alt": "Wellington Bathroom vanity"
+          "alt": "Wellington Bathroom vanity render"
         },
         {
           "image": "images/portfolio/wellington-bathroom-2.jpg",
-          "alt": "Wellington Bathroom shower"
+          "alt": "Wellington Bathroom tiled niche render"
         }
       ],
       "videos": [],
-      "credit": "Interior design by Hello Home Interiors",
       "homepage_tile_image": "images/homepage/work-wellington-bathroom.jpg",
-      "category": "residential"
+      "external_link": ""
     }
   ]
 }
