@@ -73,6 +73,12 @@ document.addEventListener('DOMContentLoaded', async function () {
       structuredDataEl.textContent = JSON.stringify(structuredData);
     }
 
+    // Portfolio page heading
+    const portfolioHeadingEl = document.getElementById('portfolio-heading');
+    if (portfolioHeadingEl && settings.portfolio_text && settings.portfolio_text.page_heading) {
+      portfolioHeadingEl.textContent = settings.portfolio_text.page_heading;
+    }
+
     // Homepage text blocks
     const ht = settings.homepage_text;
     if (ht) {
@@ -142,6 +148,7 @@ document.addEventListener('DOMContentLoaded', async function () {
       if (window.initSlideshow) window.initSlideshow();
     }
 
+    window._siteSettings = settings;
     return settings;
   }
 
@@ -173,10 +180,11 @@ document.addEventListener('DOMContentLoaded', async function () {
     // Full portfolio page listing, grouped by category in a fixed display order
     const catContainer = document.getElementById('portfolio-categories');
     if (catContainer) {
+      const pt = (window._siteSettings && window._siteSettings.portfolio_text) || {};
       const catOrder = [
-        { key: 'property', title: 'Property Developments', alt: false },
-        { key: 'commercial', title: 'Commercial Projects', alt: true },
-        { key: 'residential', title: 'Residential Projects', alt: false }
+        { key: 'property', title: pt.category_property || 'Property Developments', alt: false },
+        { key: 'commercial', title: pt.category_commercial || 'Commercial Projects', alt: true },
+        { key: 'residential', title: pt.category_residential || 'Residential Projects', alt: false }
       ];
       catContainer.innerHTML = catOrder.map(cat => {
         const items = projects.filter(p => p.category === cat.key);
@@ -220,9 +228,10 @@ document.addEventListener('DOMContentLoaded', async function () {
 
   // ---------- Terms & Conditions page content ----------
   async function loadTerms() {
+    const headingEl = document.getElementById('terms-heading');
     const introEl = document.getElementById('terms-intro');
     const sectionsEl = document.getElementById('terms-sections');
-    if (!introEl && !sectionsEl) return;
+    if (!headingEl && !introEl && !sectionsEl) return;
     let terms;
     try {
       const res = await fetch('data/terms.json');
@@ -231,6 +240,7 @@ document.addEventListener('DOMContentLoaded', async function () {
       console.error('Could not load terms content', e);
       return;
     }
+    if (headingEl && terms.page_heading) headingEl.textContent = terms.page_heading;
     if (introEl && terms.intro) introEl.textContent = terms.intro;
     if (sectionsEl && terms.sections && terms.sections.length) {
       sectionsEl.innerHTML = terms.sections.map(s => `
@@ -240,5 +250,6 @@ document.addEventListener('DOMContentLoaded', async function () {
     }
   }
 
-  await Promise.all([loadSettings(), loadPortfolio(), loadTerms()]);
+  await loadSettings();
+  await Promise.all([loadPortfolio(), loadTerms()]);
 });

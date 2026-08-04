@@ -6,6 +6,12 @@
     { "label": "Portfolio", "link": "portfolio.html" },
     { "label": "Reviews", "link": "#reviews" }
   ],
+  "portfolio_text": {
+    "page_heading": "A selection of our work",
+    "category_property": "Property Developments",
+    "category_commercial": "Commercial Projects",
+    "category_residential": "Residential Projects"
+  },
   "homepage_text": {
     "hero_heading_line1": "See the space",
     "hero_heading_line2": "before it exists.",
