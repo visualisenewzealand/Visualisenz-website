@@ -48,6 +48,31 @@ document.addEventListener('DOMContentLoaded', async function () {
     const bioEl = document.getElementById('bio-text');
     if (bioEl && settings.bio_text) bioEl.textContent = settings.bio_text;
 
+    // Structured data (JSON-LD) — helps Google understand and potentially enrich search results
+    const structuredDataEl = document.getElementById('structured-data');
+    if (structuredDataEl) {
+      const socialLinks = Object.values(settings.socials || {}).filter(Boolean);
+      const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Visualise NZ",
+        "image": "https://visualisenz.com/images/homepage/og-image.jpg",
+        "url": "https://visualisenz.com",
+        "telephone": settings.contact.phone_link,
+        "email": settings.contact.email,
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kāpiti Coast",
+          "addressRegion": "Wellington",
+          "addressCountry": "NZ"
+        },
+        "areaServed": "New Zealand",
+        "description": (settings.homepage_text && settings.homepage_text.hero_subtext) || "",
+        "sameAs": socialLinks
+      };
+      structuredDataEl.textContent = JSON.stringify(structuredData);
+    }
+
     // Homepage text blocks
     const ht = settings.homepage_text;
     if (ht) {
@@ -169,10 +194,12 @@ document.addEventListener('DOMContentLoaded', async function () {
                 <div class="video-embed"><iframe src="https://www.youtube.com/embed/${esc(v.video_id)}" title="${esc(p.title)} ${esc(v.label)} video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
               </div>`).join('')}</div>`;
           }
+          let extLink = p.external_link ? p.external_link.trim() : '';
+          if (extLink && !/^https?:\/\//i.test(extLink)) extLink = 'https://' + extLink;
           return `
           <article class="project" id="${esc(p.slug)}">
             <div class="project-head">
-              <h3>${p.external_link ? `<a href="${esc(p.external_link)}" target="_blank" rel="noopener">${esc(p.title)}</a>` : esc(p.title)}</h3>
+              <h3>${extLink ? `<a href="${esc(extLink)}" target="_blank" rel="noopener">${esc(p.title)}</a>` : esc(p.title)}</h3>
               <div class="project-meta"><span class="label">${esc(p.category_label)}</span><span class="credit">${esc(p.credit)}</span></div>
             </div>
             <div class="${gridClass}">${imagesHtml}</div>

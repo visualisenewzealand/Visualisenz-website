@@ -49,7 +49,7 @@ collections:
               - { name: "category", label: "Category", widget: "select", options: [ { label: "Property Developments", value: "property" }, { label: "Commercial Projects", value: "commercial" }, { label: "Residential Projects", value: "residential" } ] }
               - { name: "category_label", label: "Category Label (small text shown above the title on the Portfolio page)", widget: "string" }
               - { name: "credit", label: "Credit Line", widget: "string", hint: "e.g. Interior design by Visualise NZ" }
-              - { name: "external_link", label: "Client's Project Website (optional)", widget: "string", required: false, hint: "If filled in, the project title on the Portfolio page will link to this site. Leave blank for no link." }
+              - { name: "external_link", label: "Client's Project Website (optional)", widget: "string", required: false, hint: "Must start with https:// (e.g. https://example.com) — if filled in, the project title on the Portfolio page will link to this site. Leave blank for no link." }
               - { name: "layout", label: "Image Layout", widget: "select", options: [ { label: "Standard grid", value: "grid" }, { label: "Side-by-side pair (for 2-image projects)", value: "pair" } ] }
               - name: "images"
                 label: "Images"
