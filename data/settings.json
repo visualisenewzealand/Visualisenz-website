@@ -6,6 +6,13 @@
     { "label": "Portfolio", "link": "portfolio.html" },
     { "label": "Reviews", "link": "#reviews" }
   ],
+  "footer_text": {
+    "site_column_label": "Site",
+    "contact_column_label": "Get In Touch",
+    "follow_column_label": "Follow",
+    "terms_link_label": "Terms & Conditions",
+    "nz_owned_text": "NZ Owned & Operated"
+  },
   "portfolio_text": {
     "page_heading": "A selection of our work",
     "category_property": "Property Developments",

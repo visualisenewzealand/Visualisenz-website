@@ -45,6 +45,15 @@ document.addEventListener('DOMContentLoaded', async function () {
     const footerDesc = document.getElementById('footer-description');
     if (footerDesc && settings.footer_description) footerDesc.textContent = settings.footer_description;
 
+    const ft = settings.footer_text;
+    if (ft) {
+      const setFooterText = (id, val) => { const el = document.getElementById(id); if (el && val) el.textContent = val; };
+      setFooterText('footer-site-label', ft.site_column_label);
+      setFooterText('footer-contact-label', ft.contact_column_label);
+      setFooterText('footer-follow-label', ft.follow_column_label);
+      setFooterText('footer-nz-owned', ft.nz_owned_text);
+    }
+
     const bioEl = document.getElementById('bio-text');
     if (bioEl && settings.bio_text) bioEl.textContent = settings.bio_text;
 
@@ -131,9 +140,10 @@ document.addEventListener('DOMContentLoaded', async function () {
       }
       const footerNavEl = document.getElementById('footer-nav-items-container');
       if (footerNavEl) {
+        const termsLabel = (settings.footer_text && settings.footer_text.terms_link_label) || 'Terms & Conditions';
         footerNavEl.innerHTML = settings.nav_items.map(item =>
           `<li><a href="${esc(navHref(item.link))}">${esc(item.label)}</a></li>`
-        ).join('\n') + '\n<li><a href="terms.html">Terms &amp; Conditions</a></li>';
+        ).join('\n') + `\n<li><a href="terms.html">${esc(termsLabel)}</a></li>`;
       }
     }
 

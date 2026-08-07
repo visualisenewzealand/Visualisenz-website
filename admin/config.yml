@@ -125,6 +125,15 @@ collections:
               - { name: "cta_heading", label: "Final call-to-action — heading", widget: "string" }
               - { name: "cta_subtext", label: "Final call-to-action — subtext", widget: "string" }
           - { name: "footer_description", label: "Footer Description (appears on every page)", widget: "string" }
+          - name: "footer_text"
+            label: "Footer Labels (appears on every page)"
+            widget: "object"
+            fields:
+              - { name: "site_column_label", label: "\"Site\" Column Heading", widget: "string" }
+              - { name: "contact_column_label", label: "\"Get In Touch\" Column Heading", widget: "string" }
+              - { name: "follow_column_label", label: "\"Follow\" Column Heading", widget: "string" }
+              - { name: "terms_link_label", label: "Terms & Conditions Link Text", widget: "string" }
+              - { name: "nz_owned_text", label: "\"NZ Owned & Operated\" Text", widget: "string" }
           - { name: "bio_text", label: "About / Bio Text (Meet Melissa section)", widget: "text" }
           - name: "slideshow"
             label: "Services Slideshow (the 8 auto-rotating slides on the homepage)"
