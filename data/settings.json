@@ -1,39 +1,4 @@
 {
-  "nav_items": [
-    { "label": "Home", "link": "#top" },
-    { "label": "About", "link": "#about" },
-    { "label": "Services", "link": "#services" },
-    { "label": "Portfolio", "link": "portfolio.html" },
-    { "label": "Reviews", "link": "#reviews" }
-  ],
-  "footer_text": {
-    "site_column_label": "Site",
-    "contact_column_label": "Get In Touch",
-    "follow_column_label": "Follow",
-    "terms_link_label": "Terms & Conditions",
-    "nz_owned_text": "NZ Owned & Operated"
-  },
-  "portfolio_text": {
-    "page_heading": "A selection of our work",
-    "category_property": "Property Developments",
-    "category_commercial": "Commercial Projects",
-    "category_residential": "Residential Projects"
-  },
-  "homepage_text": {
-    "hero_heading_line1": "See the space",
-    "hero_heading_line2": "before it exists.",
-    "hero_subtext": "Photo-realistic 3D visualisations for interior designers, building companies, developers, architects and real estate agents — helping you sell the vision, before a single wall goes up.",
-    "manifesto_heading": "Clients don't buy a floor plan. They buy the feeling of already standing in the finished room — and that's exactly what a photo-realistic render gives them, well before the build begins.",
-    "services_heading": "How we can help",
-    "services_subtext": "A look at the work we create, and the benefits it brings to every project.",
-    "work_heading": "Step inside our renders",
-    "work_subtext": "Commercial, residential and property development projects — take a look inside some of our work.",
-    "about_heading": "Meet Melissa",
-    "reviews_heading": "What clients are saying",
-    "reviews_subtext": "See what interior designers, developers and building companies say about working with Visualise NZ.",
-    "cta_heading": "Let's visualise your next project.",
-    "cta_subtext": "Send through your plans, drawings or measurements and let's talk about what's possible."
-  },
   "contact": {
     "email": "hello@visualisenz.com",
     "phone_display": "021 500 602",
@@ -41,23 +6,105 @@
     "address": "Kāpiti Coast, Wellington, NZ",
     "nzbn": "9429051687984"
   },
-  "reviews_url": "https://share.google/uz5BSb3SUm9aPpeZi",
+  "nav_items": [
+    {
+      "label": "Home",
+      "link": "#top"
+    },
+    {
+      "label": "About",
+      "link": "#about"
+    },
+    {
+      "label": "Services",
+      "link": "#services"
+    },
+    {
+      "label": "Portfolio",
+      "link": "portfolio.html"
+    },
+    {
+      "label": "Reviews",
+      "link": "#reviews"
+    }
+  ],
+  "portfolio_text": {
+    "page_heading": "A selection of our work",
+    "category_property": "Property Developments",
+    "category_commercial": "Commercial Projects",
+    "category_residential": "Residential Projects"
+  },
+  "bio_text": "Based on the Kāpiti Coast and working with clients throughout New Zealand, Melissa is easy to work with, realistic about pricing, and always keen to hear about the next project. Get in touch — she'd love to help bring your project to life.",
   "socials": {
     "facebook": "https://www.facebook.com/visualisenz/",
     "instagram": "https://www.instagram.com/visualisenz/",
     "youtube": "https://www.youtube.com/@visualisenz",
     "linkedin": "https://www.linkedin.com/company/visualise-nz/"
   },
-  "footer_description": "Supporting the New Zealand design & building industry with professional 3D visualisation.",
-  "bio_text": "Based on the Kāpiti Coast and working with clients throughout New Zealand, Melissa is easy to work with, realistic about pricing, and always keen to hear about the next project. Get in touch — she'd love to help bring your project to life.",
+  "reviews_url": "https://share.google/uz5BSb3SUm9aPpeZi",
   "slideshow": [
-    { "label": "Commercial Projects", "description": "", "image": "images/homepage/slide-1-commercial.jpg" },
-    { "label": "Residential Projects", "description": "", "image": "images/homepage/slide-2-residential.jpg" },
-    { "label": "Property Developments", "description": "", "image": "images/homepage/slide-3-property.jpg" },
-    { "label": "Immersive Marketing", "description": "Sell new builds just like a real estate listing.", "image": "images/homepage/slide-4-immersive-marketing.jpg" },
-    { "label": "Virtual Show Homes", "description": "Expand your customer base beyond a physical location.", "image": "images/homepage/slide-5-virtual-showhomes.jpg" },
-    { "label": "Complete Design", "description": "Present full 3D exterior & interior design concepts.", "image": "images/homepage/slide-6-complete-design.jpg" },
-    { "label": "Actual Materials", "description": "Explore multiple design options before building begins.", "image": "images/homepage/slide-7-actual-materials.jpg" },
-    { "label": "On Demand", "description": "Renders when you need them, without the hiring process.", "image": "images/homepage/slide-8-on-demand.jpg" }
-  ]
+    {
+      "label": "Commercial Projects",
+      "description": "",
+      "image": "images/homepage/slide-1-commercial.jpg"
+    },
+    {
+      "label": "Residential Projects",
+      "description": "",
+      "image": "images/homepage/slide-2-residential.jpg"
+    },
+    {
+      "label": "Property Developments",
+      "description": "",
+      "image": "images/homepage/slide-3-property.jpg"
+    },
+    {
+      "label": "Immersive Marketing",
+      "description": "Sell new builds just like a real estate listing.",
+      "image": "images/homepage/slide-4-immersive-marketing.jpg"
+    },
+    {
+      "label": "Virtual Show Homes",
+      "description": "Expand your customer base beyond a physical location.",
+      "image": "images/homepage/slide-5-virtual-showhomes.jpg"
+    },
+    {
+      "label": "Complete Design",
+      "description": "Present full 3D exterior & interior design concepts.",
+      "image": "images/homepage/slide-6-complete-design.jpg"
+    },
+    {
+      "label": "Actual Materials",
+      "description": "Explore multiple design options before building begins.",
+      "image": "images/homepage/slide-7-actual-materials.jpg"
+    },
+    {
+      "label": "On Demand",
+      "description": "Renders when you need them, without the hiring process.",
+      "image": "images/homepage/slide-8-on-demand.jpg"
+    }
+  ],
+  "footer_text": {
+    "site_column_label": "Site",
+    "contact_column_label": "Get In Touch",
+    "follow_column_label": "Follow",
+    "terms_link_label": "Terms of Engagement",
+    "nz_owned_text": "NZ Owned & Operated"
+  },
+  "footer_description": "Supporting the New Zealand design & building industry with professional 3D visualisation.",
+  "homepage_text": {
+    "services_heading": "How we can help",
+    "manifesto_heading": "Clients don't buy a floor plan. They buy the feeling of already standing in the finished room — and that's exactly what a photo-realistic render gives them, well before the build begins.",
+    "hero_subtext": "Photo-realistic 3D visualisations for interior designers, building companies, developers, architects and real estate agents — helping you sell the vision, before a single wall goes up.",
+    "reviews_subtext": "See what interior designers, developers and building companies say about working with Visualise NZ.",
+    "services_subtext": "A look at the work we create, and the benefits it brings to every project.",
+    "about_heading": "Meet Melissa",
+    "cta_heading": "Let's visualise your next project.",
+    "work_heading": "Step inside our renders",
+    "hero_heading_line1": "See the space",
+    "hero_heading_line2": "before it exists.",
+    "cta_subtext": "Send through your plans, drawings or measurements and let's talk about what's possible.",
+    "reviews_heading": "What clients are saying",
+    "work_subtext": "Commercial, residential and property development projects — take a look inside some of our work."
+  }
 }
